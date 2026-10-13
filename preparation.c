@@ -23,7 +23,7 @@ size_t experiment(double* radioactivity, double* time, double start_time, double
 	assert(radioactivity != NULL);
 	assert(time != NULL);
 	
-	size_t N = floor((end_time - start_time) / step);
+	size_t N = floor((end_time - start_time) / step) + 1;
 	assert(N <= MAX_N);
 
 	tabulate_time(time, N, start_time, step);

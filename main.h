@@ -10,4 +10,7 @@
 size_t experiment(double* radioactivity, double* time, double start_time, double end_time, double step);
 void add_noise(double* radioactivity, size_t N);
 
+// Other functions
+void print_experiment_data(const double* radioactivity, const double* time, size_t N);
+
 #endif
