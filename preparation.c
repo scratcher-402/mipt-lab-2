@@ -36,6 +36,7 @@ size_t experiment(double* radioactivity, double* time, double start_time, double
 }
 
 static double gen_noise() {
+	// Generate a random value in range [-1, 1] with precision 1e-5
 	int int_noise = rand();
 	double noise = 2.0*(double)int_noise / (double)RAND_MAX - 1.0;
 	double noise_rounded = (double)floor(noise * 1e5) / 1e5;
