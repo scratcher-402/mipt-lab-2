@@ -10,6 +10,12 @@
 size_t experiment(double* radioactivity, double* time, double start_time, double end_time, double step);
 void add_noise(double* radioactivity, size_t N);
 
+// 2. Processing
+double nonlinear_equation(double *radioactivity, double *time, size_t N, double precision);
+double solution (double int1, double int2, double func1, double func2, double *radioactivity, double *time, size_t N, double precision);
+double model(double *radioactivity, double *time, size_t N, double point);
+double linear_equation(double *radioactivity, double *time, size_t N);
+
 // Other functions
 void print_experiment_data(const double* radioactivity, const double* time, size_t N);
 
