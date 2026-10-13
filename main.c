@@ -19,7 +19,7 @@ int main() {
 	size_t N = experiment(radioactivity, time, start_time, end_time, step);
 	add_noise(radioactivity, N);
 
-	print_experiment_data(radioactivity, time, N);
+	// print_experiment_data(radioactivity, time, N);
 
 	double decay_time = nonlinear_equation(radioactivity, time, N, precision);
 	printf("decay_time = %.5f\n", decay_time);
