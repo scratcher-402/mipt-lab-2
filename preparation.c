@@ -18,7 +18,7 @@ static void tabulate_time(double* time, size_t N, double start_time, double step
 }
 
 size_t experiment(double* radioactivity, double* time, double start_time, double end_time, double step) {
-	const double decay_time = 6.7;
+	const double decay_time = 3.5;
 	
 	assert(radioactivity != NULL);
 	assert(time != NULL);

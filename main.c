@@ -5,6 +5,13 @@ int main() {
 	double start_time = 0.0;
 	double end_time = 10.0;
 	double step = 0.5;
+	double precision = 1e5;
+
+	int count = scanf("%lf%lf%lf%lf", &start_time, &end_time, &step, &precision);
+	if (count != 4) {
+		puts("Input error!");
+		return 1;
+	}
 
 	double radioactivity[MAX_N];
 	double time[MAX_N];
@@ -13,6 +20,11 @@ int main() {
 	add_noise(radioactivity, N);
 
 	print_experiment_data(radioactivity, time, N);
+
+	double decay_time = nonlinear_equation(radioactivity, time, N, precision);
+	printf("decay_time = %.5f\n", decay_time);
+	double decay_rate = linear_equation(radioactivity, time, N);
+	printf("decay_rate = %.5f\n", decay_rate);
 
 	return 0;
 }
