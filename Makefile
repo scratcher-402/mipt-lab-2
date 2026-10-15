@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -fsanitize=address,undefined
+CFLAGS = -Wall -Wextra
 LDFLAGS = -lm
 SRCS = $(wildcard *.c)
 TARGET = lab2
