@@ -2,9 +2,7 @@
 #include <stdio.h>
 #include "main.h"
 
-double nonlinear_equation(double *radioactivity, double *time, size_t N, double precision) {
-    double interval1, interval2;
-    scanf ("%lf%lf", &interval1, &interval2);
+double nonlinear_equation(double *radioactivity, double *time, size_t N, double precision, double interval1, double interval2) {
     double func1 = model (radioactivity, time, N, interval1), func2 = model (radioactivity, time, N, interval2);
 
     double decay_time = solution (interval1, interval2, func1, func2, radioactivity, time, N, precision);

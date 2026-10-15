@@ -21,10 +21,20 @@ int main() {
 
 	// print_experiment_data(radioactivity, time, N);
 
-	double decay_time = nonlinear_equation(radioactivity, time, N, precision);
+	double interval1, interval2;
+	count = scanf("%lf%lf", &interval1, &interval2);
+	if (count != 2) {
+		puts("Input error");
+		return 1;
+	}
+
+	double decay_time = nonlinear_equation(radioactivity, time, N, precision, interval1, interval2);
 	printf("decay_time = %.5f\n", decay_time);
 	double decay_rate = linear_equation(radioactivity, time, N);
 	printf("decay_rate = %.5f\n", decay_rate);
+
+	double time_difference = precision_analysis(radioactivity, time, N, interval1, interval2);
+	printf("time_differences = %.5f\n", time_difference);
 
 	return 0;
 }
