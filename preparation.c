@@ -1,7 +1,7 @@
 #include <assert.h>
+#include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 #include "main.h"
 
 static double fdecay(double start_amount, double time, double decay_time) {
