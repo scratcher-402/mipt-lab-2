@@ -5,7 +5,7 @@ int main() {
 	double start_time = 0.0;
 	double end_time = 10.0;
 	double step = 0.5;
-	double precision = 1e5;
+	double precision = 1e-5;
 
 	int count = scanf("%lf%lf%lf%lf", &start_time, &end_time, &step, &precision);
 	if (count != 4) {
