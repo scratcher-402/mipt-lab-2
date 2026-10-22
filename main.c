@@ -13,6 +13,16 @@ int main() {
 		return 1;
 	}
 
+	if (start_time > end_time) {
+		printf("Invalid time interval: start_time %lf is larger than end_time %lf\n", start_time, end_time);
+		return 2;
+	}
+
+	if (step <= 0) {
+		printf("Invalid step %lf, it can't be negative", step);
+		return 2;
+	}
+
 	double radioactivity[MAX_N];
 	double time[MAX_N];
 
@@ -26,6 +36,11 @@ int main() {
 	if (count != 2) {
 		puts("Input error");
 		return 1;
+	}
+
+	if (interval1 > interval2) {
+		printf("Invalid interval: begin %lf is larger than end %lf\n", interval1, interval2);
+		return 2;
 	}
 
 	double decay_time = nonlinear_equation(radioactivity, time, N, precision, interval1, interval2);
