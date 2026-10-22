@@ -10,7 +10,7 @@ double nonlinear_equation(double *radioactivity, double *time, size_t N, double 
     return decay_time;
 }
 
-double solution (double int1, double int2, double func1, double func2, double *radioactivity, double *time, size_t N, double precision) {
+double solution(double int1, double int2, double func1, double func2, double *radioactivity, double *time, size_t N, double precision) {
     double point = (int1 + int2) / 2;
 
     if (fabs (int1 - int2) <= precision) {
@@ -22,7 +22,7 @@ double solution (double int1, double int2, double func1, double func2, double *r
     if (func * func1 > 0) {
         return solution (point, int2, func, func2, radioactivity, time, N, precision);
     }
-    
+
     return solution (int1, point, func1, func, radioactivity, time, N, precision);
 }
 
@@ -34,7 +34,7 @@ double model(double *radioactivity, double *time, size_t N, double point) {
     return res;
 }
 
-double linear_equation (double *radioactivity, double *time, size_t N) {
+double linear_equation(double *radioactivity, double *time, size_t N) {
     double numerator = 0, denominator = 0;
 
     for (size_t i = 0; i < N; ++i) {
@@ -46,3 +46,4 @@ double linear_equation (double *radioactivity, double *time, size_t N) {
 
     return decay_rate;
 }
+
