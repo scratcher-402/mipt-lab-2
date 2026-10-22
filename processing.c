@@ -46,4 +46,3 @@ double linear_equation(double *radioactivity, double *time, size_t N) {
 
     return decay_rate;
 }
-
